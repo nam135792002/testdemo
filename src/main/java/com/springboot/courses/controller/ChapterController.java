@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/courses")
+@RequestMapping("/api/courses")
 public class ChapterController {
 
     @Autowired private ChapterService chapterService;
