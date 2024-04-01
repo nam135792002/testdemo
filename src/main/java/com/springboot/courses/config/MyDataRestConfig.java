@@ -14,11 +14,11 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config,
                                                      CorsRegistry corsRegistry){
-        HttpMethod[] theunsupportedActions = {HttpMethod.POST, HttpMethod.PATCH,
+        HttpMethod[] theUnsupportedActions = {HttpMethod.POST, HttpMethod.PATCH,
                 HttpMethod.DELETE, HttpMethod.PUT, HttpMethod.GET};
         config.exposeIdsFor(Book.class);
 
-        disableHttpMethods(Book.class, config, theunsupportedActions);
+        disableHttpMethods(Book.class, config, theUnsupportedActions);
 
         corsRegistry.addMapping(config.getBasePath() + "/**")
                 .allowedOrigins(theAllowedOrigins);

@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/lessons")
+@RequestMapping("/lessons")
 public class LessonController {
 
     @Autowired private LessonService lessonService;
